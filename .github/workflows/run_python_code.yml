@@ -41,14 +41,14 @@ jobs:
       - name: Deploy to Cafe24 Web Hosting via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          # server: ${{ secrets.FTP_SERVER }}
-          # username: ${{ secrets.FTP_USERNAME }}
-          # password: ${{ secrets.FTP_PASSWORD }}
-          # server-dir: public_html/www/
-          # exclude: |
-          #   **/.git*
-          #   **/.git*/**
-          #   **/node_modules/**
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: public_html/www/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
         env:
           pythonLocation: /opt/hostedtoolcache/Python/3.11.3/x64
           LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.3/x64/lib
